@@ -126,7 +126,7 @@ export default function ApplicationModal({ isOpen, onClose, intention }: Applica
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" encType="multipart/form-data">
                 {/* Formsubmit Configuration */}
                 <input type="hidden" name="_subject" value={subject} />
                 <input type="hidden" name="Application Type" value={intention} />
@@ -174,6 +174,12 @@ export default function ApplicationModal({ isOpen, onClose, intention }: Applica
                 <div className="space-y-1.5">
                   <label className="text-sm font-medium text-white/80">Details / How can we help?</label>
                   <textarea required name="Details" rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all resize-none" placeholder="Tell us a bit about your goals..."></textarea>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium text-white/80">Resume (Optional)</label>
+                  <input type="file" name="attachment" accept=".pdf,.doc,.docx" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white/70 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-orange file:text-black hover:file:bg-brand-orange-dark transition-all" />
+                  <p className="text-xs text-white/40 mt-1">Accepted formats: PDF, DOC, DOCX</p>
                 </div>
 
                 <div className="pt-4">
