@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { X, CheckCircle2, Loader2 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -11,7 +11,7 @@ interface ApplicationModalProps {
 export default function ApplicationModal({ isOpen, onClose, intention }: ApplicationModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
 
   if (!isOpen) return null;
 
@@ -27,34 +27,17 @@ export default function ApplicationModal({ isOpen, onClose, intention }: Applica
     ? "Join our network of professionals leading the next generation."
     : "Take your first step. Fill out the details below to get started.";
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setIsSubmitting(true);
-    setError('');
+  };
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/haseeb.ashfaq490@gmail.com', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json'
-        },
-        body: formData
-      });
-
-      if (response.ok) {
-        setIsSuccess(true);
-        form.reset();
-      } else {
-        const data = await response.json();
-        setError(data.message || 'Something went wrong. Please try again later.');
-      }
-    } catch (err) {
-      setError('A network error occurred. Please try again.');
-    } finally {
+  const handleIframeLoad = () => {
+    if (isSubmitting) {
       setIsSubmitting(false);
+      setIsSuccess(true);
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     }
   };
 
@@ -63,7 +46,6 @@ export default function ApplicationModal({ isOpen, onClose, intention }: Applica
     // Reset state after animation finishes
     setTimeout(() => {
       setIsSuccess(false);
-      setError('');
       setIsSubmitting(false);
     }, 300);
   };
@@ -120,13 +102,22 @@ export default function ApplicationModal({ isOpen, onClose, intention }: Applica
               <h2 className="text-3xl font-black text-white mb-2">{title}</h2>
               <p className="text-white/60 mb-8">{description}</p>
 
-              {error && (
-                <div className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 rounded-xl mb-6 text-sm">
-                  {error}
-                </div>
-              )}
+              <iframe 
+                name="hidden_iframe" 
+                id="hidden_iframe" 
+                style={{ display: 'none' }} 
+                onLoad={handleIframeLoad} 
+              ></iframe>
 
-              <form onSubmit={handleSubmit} className="space-y-4" encType="multipart/form-data">
+              <form 
+                ref={formRef}
+                action="https://formsubmit.co/haseeb.ashfaq490@gmail.com" 
+                method="POST"
+                target="hidden_iframe" 
+                encType="multipart/form-data"
+                onSubmit={handleSubmit} 
+                className="space-y-4"
+              >
                 {/* Formsubmit Configuration */}
                 <input type="hidden" name="_subject" value={subject} />
                 <input type="hidden" name="Application Type" value={intention} />
