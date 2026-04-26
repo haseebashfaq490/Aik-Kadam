@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Globe, Lock, Rocket } from 'lucide-react';
 
-export default function Hero() {
+interface HeroProps {
+  onOpenModal: (intention: 'mentee' | 'mentor') => void;
+}
+
+export default function Hero({ onOpenModal }: HeroProps) {
   return (
     <section className="relative min-h-screen flex text-center items-center justify-center pt-32 pb-20 px-6 md:px-12 overflow-hidden z-10">
       
@@ -31,13 +35,13 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
-            <a
-              href="#get-involved"
+            <button
+              onClick={() => onOpenModal('mentee')}
               className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-orange text-black font-bold text-lg hover:bg-brand-orange-dark transition-all hover:scale-105 active:scale-95 w-full sm:w-auto"
             >
               Get Expert Guidance
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
             <a
               href="#services"
               className="px-8 py-4 rounded-full glass-panel text-white font-semibold hover:bg-white/10 transition-all text-lg w-full sm:w-auto"
