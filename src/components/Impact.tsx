@@ -17,14 +17,29 @@ const reviews = [
     role: "Software Engineer",
   },
   {
+    quote: "I thought studying abroad was just a dream for someone from my background. With their step-by-step guidance, I secured a $120k scholarship to my dream university. It changed my family's life.",
+    author: "Zainab R.",
+    role: "Full-ride Scholar",
+  },
+  {
     quote: "The admissions strategy helped me secure a fully-funded Master's in the USA. Incredible free mentorship.",
     author: "Ali M.",
     role: "Graduate Student",
   },
   {
+    quote: "When I had lost hope after multiple rejections, they helped me rebuild my profile and craft a compelling story. Now I'm heading to Germany on a DAAD scholarship.",
+    author: "Ahmad H.",
+    role: "DAAD Scholar",
+  },
+  {
     quote: "I thought studying abroad was impossible without funds. Aik Kadam showed me the roadmap to a full-ride scholarship.",
     author: "Fatima R.",
     role: "Data Scientist",
+  },
+  {
+    quote: "The personalized mentorship I received was incredible. They didn't just give advice; they held my hand through the entire process. I owe my $80k fellowship entirely to this initiative.",
+    author: "Ayesha M.",
+    role: "Global Leader Fellow",
   },
   {
     quote: "The mock interviews and insider referrals gave me the confidence to crack consulting interviews.",
