@@ -30,8 +30,8 @@ export default function Hero({ onOpenModal }: HeroProps) {
             Your first step towards <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ffd166]">global opportunities</span>.
           </h1>
-          <p className="text-xl md:text-2xl text-white/60 leading-relaxed mb-10 max-w-3xl text-balance">
-            We navigated the daunting journey to top global universities and dream careers because incredible mentors believed in us when we needed it most. We know the struggles, the doubts, and the dreams you carry. Now, it's our turn to hold the door open and give you the guidance you deserve—completely free of charge.
+          <p className="text-xl md:text-2xl text-white/60 leading-relaxed mb-10 max-w-2xl text-balance mx-auto">
+            Great mentorship changed our lives, helping us reach top global universities and dream careers. Now, we're holding the door open for you and providing the guidance you need, completely free of charge.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">

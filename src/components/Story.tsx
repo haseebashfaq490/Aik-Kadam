@@ -11,7 +11,7 @@ export default function Story() {
         <h3 className="text-4xl md:text-5xl font-sans font-black text-white mb-8">Built by those who walked the path.</h3>
         
         <p className="text-xl text-white/70 leading-relaxed text-balance mb-12">
-          As a husband and wife team, Aik Kadam was born from our shared journey. Having built our education and careers from the ground up, we know exactly how isolating the process can be. This initiative is simply our way of giving back—becoming the accessible mentors we once wished we had.
+          We built Aik Kadam because we've walked this exact path. As a husband and wife team who navigated the overwhelming journey of studying globally, securing scholarships, and building careers from scratch, we know the struggles firsthand. We faced every confusing application, every sting of rejection, and every moment of doubt together. We made it because incredible mentors believed in us when we needed it most. We created this initiative to give back, to be the mentors we once wished we had, and to support your boldest ambitions, completely free of charge.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4 text-left border border-white/10 rounded-[2rem] p-8 glass-panel relative overflow-hidden">
