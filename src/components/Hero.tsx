@@ -24,11 +24,11 @@ export default function Hero({ onOpenModal }: HeroProps) {
         >
           <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full glass-panel text-white/80 text-xs sm:text-sm font-semibold tracking-wide border border-brand-orange/30">
             <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
-            Free guidance for studying abroad
+            100% Free career & higher education mentorship
           </div>
           <h1 className="text-6xl md:text-8xl font-sans font-black leading-[1.05] tracking-tighter text-white mb-6 text-balance">
             Your first step towards <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ffd166]">studying abroad</span>.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ffd166]">global opportunities</span>.
           </h1>
           <p className="text-xl md:text-2xl text-white/60 leading-relaxed mb-10 max-w-2xl text-balance">
             I got into top universities with the help of great mentors. Now, I want to help you do the same, completely free of charge.

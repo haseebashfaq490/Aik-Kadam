@@ -11,7 +11,7 @@ export default function Story() {
         <h3 className="text-4xl md:text-5xl font-sans font-black text-white mb-8">Built by those who walked the path.</h3>
         
         <p className="text-xl text-white/70 leading-relaxed text-balance mb-12">
-          I went through the overwhelming process of global admissions and job hunting. From a small town to building a career in Canada, I learned a lot along the way. Now, I want to share everything I learned with you, completely free.
+          We built Aik Kadam because we've walked this path ourselves. As a husband and wife team who navigated the overwhelming journey of studying globally, securing scholarships, and building careers from scratch, we know the struggles firsthand. We faced every confusing application, every rejection, and every moment of doubt together. Now, we want to hold the door open for you. We created this initiative to give back, to be the mentors we wish we had, and to support your dreams—completely free of charge.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4 text-left border border-white/10 rounded-[2rem] p-8 glass-panel relative overflow-hidden">

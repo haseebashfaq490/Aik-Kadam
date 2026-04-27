@@ -3,7 +3,7 @@ import { Quote, Users, GraduationCap, Building2, UserCircle, Briefcase, HandHear
 
 const stats = [
   { value: "300+", label: "People Helped", icon: Users },
-  { value: "20+", label: "Scholarships Guided", icon: GraduationCap },
+  { value: "$300k+", label: "Scholarships Secured", icon: GraduationCap },
   { value: "50+", label: "Higher Ed Placements", icon: Building2 },
   { value: "50+", label: "Active Mentors", icon: UserCircle },
   { value: "100+", label: "Job Referrals", icon: Briefcase },
