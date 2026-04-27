@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Story from './components/Story';
 import WhatWeDo from './components/WhatWeDo';
+import Testimonials from './components/Testimonials';
 import Impact from './components/Impact';
 import GetInvolved from './components/GetInvolved';
 import Footer from './components/Footer';
@@ -37,6 +38,7 @@ export default function App() {
         <main>
           <Hero onOpenModal={openModal} />
           <Story />
+          <Testimonials />
           <WhatWeDo />
           <Impact />
           <GetInvolved onOpenModal={openModal} />
