@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Story from './components/Story';
 import WhatWeDo from './components/WhatWeDo';
+import AIDecoder from './components/AIDecoder';
 import Impact from './components/Impact';
 import GetInvolved from './components/GetInvolved';
 import Footer from './components/Footer';
@@ -38,6 +39,7 @@ export default function App() {
           <Hero onOpenModal={openModal} />
           <Story />
           <WhatWeDo />
+          <AIDecoder />
           <Impact />
           <GetInvolved onOpenModal={openModal} />
         </main>
