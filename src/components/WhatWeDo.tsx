@@ -48,9 +48,10 @@ export default function WhatWeDo() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`rounded-[2rem] p-8 md:p-10 border border-white/5 shadow-2xl flex flex-col justify-between overflow-hidden relative group ${item.colSpan} ${item.bg}`}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className={`rounded-[2rem] p-8 md:p-10 border border-white/5 shadow-2xl flex flex-col justify-between overflow-hidden relative group cursor-pointer ${item.colSpan} ${item.bg}`}
             >
               <div className="relative z-10 mb-8">
                 <item.icon size={48} className={`mb-6 ${index === 1 ? 'text-black' : 'text-brand-orange'}`} />

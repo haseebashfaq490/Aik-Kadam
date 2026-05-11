@@ -23,10 +23,15 @@ export default function Story() {
             "Direct industry referrals",
             "Global alumni network"
           ].map((item, i) => (
-             <div key={i} className="flex items-center gap-3">
+             <motion.div 
+               key={i} 
+               whileHover={{ x: 10, scale: 1.02 }}
+               transition={{ type: "spring", stiffness: 300, damping: 20 }}
+               className="flex items-center gap-3 cursor-pointer py-1"
+             >
                <CheckCircle2 className="text-brand-orange w-6 h-6" />
                <span className="text-white/90 font-medium text-lg">{item}</span>
-             </div>
+             </motion.div>
           ))}
         </div>
       </div>
