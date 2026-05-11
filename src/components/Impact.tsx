@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Quote, Users, GraduationCap, Building2, UserCircle, Briefcase, HandHeart } from 'lucide-react';
 import { motion, useInView, useMotionValue, useSpring, animate } from 'motion/react';
+import AIDecoder from './AIDecoder';
 
 const stats = [
   { value: 300, prefix: "", suffix: "+", label: "People Helped", icon: Users },
@@ -118,7 +119,9 @@ export default function Impact() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 text-center">
+      <AIDecoder />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 mt-24 text-center">
         <h3 className="text-3xl md:text-4xl font-sans font-black text-white">Don't just take our word for it.</h3>
       </div>
 

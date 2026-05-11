@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import BrandLogo from './BrandLogo';
 
 const navLinks = [
+  { name: 'Why Us', href: '#story' },
   { name: 'Services', href: '#services' },
   { name: 'Impact', href: '#impact' },
-  { name: 'Why Us', href: '#story' },
+  { name: 'AI Profile Decoder', href: '#ai-decoder' },
 ];
 
 export default function Navbar() {
