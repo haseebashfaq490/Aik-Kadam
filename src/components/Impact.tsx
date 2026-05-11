@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Quote, Users, GraduationCap, Building2, UserCircle, Briefcase, HandHeart } from 'lucide-react';
-import { motion, useInView, useMotionValue, useSpring } from 'motion/react';
+import { motion, useInView, useMotionValue, useSpring, animate } from 'motion/react';
 
 const stats = [
   { value: 300, prefix: "", suffix: "+", label: "People Helped", icon: Users },
@@ -11,41 +11,48 @@ const stats = [
   { value: 0, prefix: "$", suffix: "", label: "Cost to Students", icon: HandHeart },
 ];
 
-function CountUpStat({ 
-  value, 
-  prefix, 
-  suffix 
-}: { 
-  value: number; 
-  prefix: string; 
-  suffix: string; 
-}) {
-  const ref = useRef<HTMLSpanElement>(null);
+function StatCard({ stat }: { stat: typeof stats[0] }) {
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, {
-    damping: 30,
-    stiffness: 100,
-  });
-
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
     if (isInView) {
-      motionValue.set(value);
+      const controls = animate(0, stat.value, {
+        type: "spring",
+        stiffness: 100,
+        damping: 30,
+        onUpdate: (v) => setDisplayValue(Math.floor(v)),
+      });
+      return controls.stop;
     }
-  }, [isInView, value, motionValue]);
+  }, [isInView, stat.value]);
 
-  useEffect(() => {
-    return springValue.on("change", (latest) => {
-      setDisplayValue(Math.floor(latest));
+  const handleHover = () => {
+    animate(0, stat.value, {
+      type: "spring",
+      stiffness: 100,
+      damping: 30,
+      onUpdate: (v) => setDisplayValue(Math.floor(v)),
     });
-  }, [springValue]);
+  };
 
   return (
-    <span ref={ref}>
-      {prefix}{displayValue}{suffix}
-    </span>
+    <motion.div 
+      ref={ref}
+      onMouseEnter={handleHover}
+      whileHover={{ y: -5, scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="glass-panel p-6 md:p-8 rounded-[2rem] flex flex-col items-center justify-center text-center group hover:border-brand-orange/50 transition-colors cursor-pointer"
+    >
+      <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-orange/20 transition-all">
+        <stat.icon className="text-brand-orange w-6 h-6" />
+      </div>
+      <p className="text-4xl md:text-5xl font-black text-white mb-2">
+        {stat.prefix}{displayValue}{stat.suffix}
+      </p>
+      <p className="text-sm md:text-base text-white/60 font-medium uppercase tracking-widest">{stat.label}</p>
+    </motion.div>
   );
 }
 
@@ -107,20 +114,7 @@ export default function Impact() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-24 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
         {stats.map((stat, i) => (
-          <motion.div 
-            key={i} 
-            whileHover={{ y: -5, scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="glass-panel p-6 md:p-8 rounded-[2rem] flex flex-col items-center justify-center text-center group hover:border-brand-orange/50 transition-colors cursor-pointer"
-          >
-            <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-orange/20 transition-all">
-              <stat.icon className="text-brand-orange w-6 h-6" />
-            </div>
-            <p className="text-4xl md:text-5xl font-black text-white mb-2">
-              <CountUpStat value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
-            </p>
-            <p className="text-sm md:text-base text-white/60 font-medium uppercase tracking-widest">{stat.label}</p>
-          </motion.div>
+          <StatCard key={i} stat={stat} />
         ))}
       </div>
 

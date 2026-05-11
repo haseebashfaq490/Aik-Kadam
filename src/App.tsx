@@ -39,8 +39,8 @@ export default function App() {
           <Hero onOpenModal={openModal} />
           <Story />
           <WhatWeDo />
-          <AIDecoder />
           <Impact />
+          <AIDecoder />
           <GetInvolved onOpenModal={openModal} />
         </main>
         <Footer />
