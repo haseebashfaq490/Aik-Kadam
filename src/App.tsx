@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Story from './components/Story';
+import FounderMessage from './components/FounderMessage';
 import WhatWeDo from './components/WhatWeDo';
 import Impact from './components/Impact';
 import GetInvolved from './components/GetInvolved';
@@ -62,6 +63,7 @@ export default function App() {
         <main>
           <Hero onOpenModal={openModal} />
           <Story />
+          <FounderMessage />
           <WhatWeDo />
           <Impact />
           <GetInvolved onOpenModal={openModal} />
