@@ -107,7 +107,7 @@ const reviews = [
 
 export default function Impact() {
   return (
-    <section id="impact" className="py-24 relative z-10 bg-[#09090b] overflow-hidden border-y border-white/5">
+    <section id="impact" className="py-16 md:py-20 relative z-10 bg-[#09090b] overflow-hidden border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 text-center">
         <h2 className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-4">Our Impact So Far</h2>
         <h3 className="text-4xl md:text-5xl font-sans font-black text-white">Numbers that matter.</h3>

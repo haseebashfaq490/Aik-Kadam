@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react';
 
 export default function FounderMessage() {
   return (
-    <section className="py-24 relative z-10 w-full mb-12">
+    <section className="pt-8 pb-16 relative z-10 w-full mb-8">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <h2 className="text-3xl font-black text-white text-center mb-12 uppercase tracking-wide">
           Message from Co-Founder
@@ -16,13 +16,13 @@ export default function FounderMessage() {
           
           <div className="space-y-6 text-base text-white/80 leading-relaxed font-sans mb-12 italic">
             <p>
-              "Growing up in a humble family in Pattoki, Pakistan, I had big dreams. For a long time, they felt like they belonged to someone else. Then I took one step. A fully funded scholarship to LUMS opened a door I never thought was mine to walk through. One opportunity led to another — a fully funded exchange program to the United States, then a scholarship for an MSc from Ivey Business School at Western University in Canada. Today, I am a permanent resident of Canada, CEO of ThinkAgentic, and working on some of the most ambitious energy projects in the world at Bruce Power."
+              "Growing up in a humble family in Pattoki, Pakistan, I had big dreams. For a long time, they felt like they belonged to someone else. Then I took one step. A fully funded scholarship to LUMS opened a door I never thought was mine to walk through. One opportunity led to another, a fully funded exchange program to the United States, then a scholarship for an MSc from Ivey Business School at Western University in Canada. Today, I am a permanent resident of Canada, CEO of ThinkAgentic, and working on some of the most ambitious energy projects in the world at Bruce Power."
             </p>
             <p>
-              "But I have never forgotten where I came from. Every milestone in my journey traces back to someone who believed in me before I believed in myself. That is exactly why I founded ایک قدم — a completely free mentorship initiative dedicated to helping deserving students access the higher education and career opportunities they deserve."
+              "But I have never forgotten where I came from. Every milestone in my journey traces back to someone who believed in me before I believed in myself. That is exactly why I founded ایک قدم: a completely free mentorship initiative dedicated to helping deserving students access the higher education and career opportunities they deserve."
             </p>
             <p>
-              "Because all it takes is one step to change everything. I invite you to join this mission. Together, let's open doors for the next generation. ایک قدم — One Step. Endless Possibility."
+              "Because all it takes is one step to change everything. I invite you to join this mission. Together, let's open doors for the next generation. ایک قدم - One Step. Endless Possibility."
             </p>
           </div>
 

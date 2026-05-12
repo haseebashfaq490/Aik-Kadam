@@ -35,7 +35,7 @@ const offerings = [
 
 export default function WhatWeDo() {
   return (
-    <section id="services" className="py-24 relative z-10 w-full bg-warm-bg">
+    <section id="services" className="py-16 md:py-20 relative z-10 w-full bg-warm-bg">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <h2 className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-4">The Playbook</h2>

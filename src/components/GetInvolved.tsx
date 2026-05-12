@@ -8,7 +8,7 @@ interface GetInvolvedProps {
 
 export default function GetInvolved({ onOpenModal }: GetInvolvedProps) {
   return (
-    <section id="get-involved" className="py-32 relative overflow-hidden bg-brand-orange">
+    <section id="get-involved" className="py-16 md:py-24 relative overflow-hidden bg-brand-orange">
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 text-center">
         <h2 className="text-5xl md:text-7xl font-sans font-black text-black mb-8 leading-tight tracking-tight">
