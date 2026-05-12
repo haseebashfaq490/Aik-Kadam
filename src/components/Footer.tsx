@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, Mail } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 
 export default function Footer() {
@@ -8,11 +8,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
         
         {/* Left Side - Brand Logo */}
-        <div>
+        <div className="flex flex-col items-center md:items-start">
           <BrandLogo scale={1} className="mb-4" />
-          <p className="text-white/50 text-sm max-w-xs text-center md:text-left">
+          <p className="text-white/50 text-sm max-w-xs text-center md:text-left mb-6">
             Unlocking global education and careers for those who dare to take the first step.
           </p>
+          <a shrink="0" href="mailto:aikkadam.info@gmail.com" className="group flex items-center gap-3 text-white/60 hover:text-brand-orange transition-colors">
+            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-orange/10 transition-colors">
+               <Mail size={18} />
+            </div>
+            <span className="text-sm font-medium tracking-wide">aikkadam.info@gmail.com</span>
+          </a>
         </div>
 
         {/* Right Side - Socials */}
