@@ -111,7 +111,7 @@ export default function ApplicationModal({ isOpen, onClose, intention }: Applica
 
               <form 
                 ref={formRef}
-                action="https://formsubmit.co/haseeb.ashfaq490@gmail.com" 
+                action="https://formsubmit.co/aikkadam.info@gmail.com" 
                 method="POST"
                 target="hidden_iframe" 
                 encType="multipart/form-data"
